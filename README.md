@@ -90,5 +90,65 @@ add_filter('wpcf7_form_class_attr', function($html_class) {
 });
 ```
 
+- `wpcf7_form_enctype`
+
+```php
+/**
+ * Change de form enctype tag
+ *
+ * @param $html_enctype An empty string
+ * @return string The new enctype tag value
+ */
+add_filter('wpcf7_form_enctype', function($html_enctype = '') {
+    return $html_enctype;
+});
+```
+
+- `wpcf7_form_novalidate`
+
+```php
+/**
+ * Description
+ *
+ * @param $support_html5 The result of wpcf7_support_html5() function call
+ * @return @novalidate
+ */
+add_filter('wpcf7_form_novalidate', function($support_html5) {
+    return null;
+});
+```
+
+- `wpcf7_form_response_output`
+
+```php
+/**
+ * Filter the form response output
+ *
+ * @param $output 
+ * @param $class 
+ * @param $content 
+ * @param $cf7 
+ * @return @output
+ */
+add_filter('wpcf7_form_response_output', function($output, $class, $content, $cf7) {
+    return $output;
+});
+```
+
+- `wpcf7_validation_error`
+
+```php
+/**
+ * Return the validation HTML code message for a field error
+ *
+ * @param $error The HTML like '<span role="alert" class="wpcf7-not-valid-tip">%s</span>
+ * @param $name The field name
+ * @param $cf7 The CF7 object
+ * @return @error The new HTML error
+ */
+add_filter('wpcf7_validation_error', function($error, $name, $cf7) {
+    return $error;
+});
+```
 
 
