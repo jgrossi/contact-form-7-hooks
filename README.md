@@ -151,4 +151,17 @@ add_filter('wpcf7_validation_error', function($error, $name, $cf7) {
 });
 ```
 
+- `wpcf7_form_elements`
+
+```php
+/**
+ * Return all visible form elements
+ *
+ * @return $form_elements
+ */
+function filter_wpcf7_form_elements( $elements ) {     
+    return $elements; 
+};
+add_filter( 'wpcf7_form_elements', 'filter_wpcf7_form_elements', 10, 3 ); 
+```
 
